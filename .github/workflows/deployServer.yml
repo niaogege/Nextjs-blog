@@ -38,8 +38,5 @@ jobs:
             './*' => $TARGET_DIR/
           last_ssh: |-
             cd $TARGET_DIR
-            node -v
-            # npm i
-            # npm run build 
-            # npm run start            
+            node -v          
             echo $LASTSSH
