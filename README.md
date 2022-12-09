@@ -55,4 +55,4 @@ EXPOSE 3002
 - docker image push niaogege/next-demo:0.0.1
 
 // 本地拉下来之后
-docker container run --rm -p 8000:3002 -it niaogege/next-demo：0.0.1
+docker container run --rm -p 3002:3002 -it niaogege/next-demo：0.0.1

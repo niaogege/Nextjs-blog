@@ -1,6 +1,14 @@
-FROM node:16
+# 拉取pm2
+FROM keymetrics/pm2:latest-alpine
+# build
+FROM node:16 AS build_image
 COPY . /Next
 WORKDIR /Next
 RUN npm install && npm run build
-CMD npm run start
 EXPOSE 3002
+
+# running
+FROM node:16
+WORKDIR /Next
+COPY --from=build_image ./.next ./.next
+CMD npm run server
