@@ -39,7 +39,7 @@ jobs:
           last_ssh: |-
             cd $TARGET_DIR
             node -v
-            npm i
-            npm run build 
-            npm run start            
+            # npm i
+            # npm run build 
+            # npm run start            
             echo $LASTSSH
