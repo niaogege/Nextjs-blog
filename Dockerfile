@@ -1,5 +1,5 @@
 # 拉取pm2
-FROM keymetrics/pm2:latest-alpine
+FROM treehouses/pm2-tags:arm64-202211250840
 # build
 FROM node:16 AS build_image
 WORKDIR /Next
