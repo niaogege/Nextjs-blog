@@ -10,5 +10,5 @@ EXPOSE 3002
 # running
 FROM node:16
 WORKDIR /Next
-COPY --from=build_image ./.next ./.next
+COPY --from=build_image /Next/.next /Next/.next
 CMD npm run server
