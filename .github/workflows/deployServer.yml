@@ -38,5 +38,6 @@ jobs:
             './*' => $TARGET_DIR/
           last_ssh: |-
             cd $TARGET_DIR
-            node -v          
+            node -v
+            docker image build -t next-demo:0.0.7 .
             echo $LASTSSH
