@@ -36,8 +36,8 @@ jobs:
             mkdir -p $TARGET_DIR
           scp: |-
             './*' => $TARGET_DIR/
-          last_ssh: |-
+          last_ssh: |- # --build 每一次都需要重新打镜像
             cd $TARGET_DIR
             node -v
-            docker-compose up -d
+            docker-compose up -d --build 
             echo $LASTSSH
