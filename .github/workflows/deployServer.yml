@@ -39,5 +39,5 @@ jobs:
           last_ssh: |-
             cd $TARGET_DIR
             node -v
-            docker image build -t next-demo .
+            docker-compose up
             echo $LASTSSH
