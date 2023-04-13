@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout";
 
 const Page = () => {
   return (
-    <section className="flex h-auto w-full justify-center bg-white ">
+    <section className="flex h-auto w-full justify-center bg-white">
       Tags
     </section>
   );

@@ -2,6 +2,8 @@ import Markdown from "markdown-it";
 import matter from "gray-matter";
 import Error from "next/error";
 import { InferGetServerSidePropsType, GetServerSidePropsContext } from "next";
+import { NextPageWithLayout } from "@/types/page";
+import { Layout } from "@/components/layout";
 import { getArticleDetail } from "../../lib/db";
 import { Article } from "../../types/article";
 const Page = ({
@@ -64,5 +66,11 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   // 将数据传递到页面上
   return { props: { statusCode: 500 } };
 }
+
+(Page as NextPageWithLayout).getLayout = function getLayout(
+  page: React.ReactElement
+) {
+  return <Layout>{page}</Layout>;
+};
 
 export default Page;

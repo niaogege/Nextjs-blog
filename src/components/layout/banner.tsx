@@ -34,14 +34,13 @@ export const Banner = () => {
   console.log(pathname, "pathname");
   return (
     <section className="fixed z-10 flex h-18 w-full justify-center bg-homebg">
-      <section className="p-4 flex flex-row w-screen max-w-screen-2xl justify-between items-center">
+      <section className="p-4 flex flex-row w-screen max-w-screen-xl justify-between items-center">
         <div onClick={goHome} className="cursor-pointer p-2">
           <img
-            className="w-7 inline mr-1"
+            className="w-8 inline"
             src={"https://www.bythewayer.com/img/logo1.webp"}
             alt="MyBlog"
           />
-          {/* <p className="font-bold inline">My Blog</p> */}
         </div>
         <div>
           <ul className="flex flex-row ">

@@ -28,9 +28,9 @@ export default function ArticleList({
                     alt={article.article_info.title}
                   />
                 </div>
-                <div className="md:pl-8">
+                <div className="md:pl-8 mt-3">
                   <div>
-                    <h3 className="text-2xl font-bold leading-8 tracking-tight">
+                    <h3 className="text-2xl font-bold leading-8 tracking-tight cursor-pointer">
                       <Link
                         className="text-gray-900 dark:text-gray-100"
                         href={`/blog/${article.article_id}`}
@@ -40,12 +40,10 @@ export default function ArticleList({
                     </h3>
                     <div className="mt-3 flex flex-wrap">
                       {article.tags.map((tag) => (
-                        <Link
-                          key={tag.tag_id}
-                          className="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          href={`/tags/${tag.tag_name}`}
-                        >
-                          {tag.tag_name}
+                        <Link key={tag.tag_id} href={`/tags/${tag.tag_name}`}>
+                          <span className="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-red-500 dark:hover:text-primary-400 cursor-pointer">
+                            {tag.tag_name}
+                          </span>
                         </Link>
                       ))}
                     </div>
@@ -62,6 +60,9 @@ export default function ArticleList({
                       day: "numeric",
                     })}
                   </time>
+                  <span className="text-xs text-gray-400">
+                    &nbsp; write by @{article.author_user_info.user_name}
+                  </span>
                 </div>
               </div>
             </article>
