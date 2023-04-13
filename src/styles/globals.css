@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 @import "./reset.css";
+
+@layer components {
+  .text-underline {
+    @apply underline underline-offset-4 transition-all;
+  }
+}

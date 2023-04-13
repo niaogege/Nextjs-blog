@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@badrap/bar-of-progress': ^0.2.2
   '@tailwindcss/typography': ^0.5.9
   '@types/markdown-it': ^12.2.3
   '@types/node': 18.7.22
@@ -8,6 +9,7 @@ specifiers:
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.14
   axios: ^1.3.5
+  clsx: ^1.1.1
   eslint: 8.24.0
   eslint-config-next: 12.3.1
   gray-matter: ^4.0.3
@@ -20,7 +22,9 @@ specifiers:
   typescript: 4.8.3
 
 dependencies:
+  '@badrap/bar-of-progress': 0.2.2
   axios: 1.3.5
+  clsx: 1.2.1
   gray-matter: 4.0.3
   markdown-it: 13.0.1
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
@@ -48,6 +52,10 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
     dev: true
+
+  /@badrap/bar-of-progress/0.2.2:
+    resolution: {integrity: sha512-Ig7MdFQM3OA7Ror5UB1ZutXNZFwxh6YExZvcd6EZloOgcXUR8PKNLH2wUVoeh92NMPnPWr6J/l9Mp+f3z7O7MQ==}
+    dev: false
 
   /@eslint/eslintrc/1.4.1:
     resolution: {integrity: sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==}
@@ -646,6 +654,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert/2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}

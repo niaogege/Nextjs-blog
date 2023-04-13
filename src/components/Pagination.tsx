@@ -6,11 +6,12 @@ interface Props {
 }
 
 export default function Pagination({ totalPages, currentPage }: Props) {
+  console.log(totalPages, "totalPages");
   const prevPage = currentPage - 1 > 0;
   const nextPage = currentPage + 1 <= totalPages;
 
   return (
-    <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+    <div className="space-y-2 pt-6 pb-8 md:space-y-5 mx-4">
       <nav className="flex justify-between">
         {!prevPage && (
           <button

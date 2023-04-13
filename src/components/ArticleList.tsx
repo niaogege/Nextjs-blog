@@ -28,7 +28,7 @@ export default function ArticleList({
                     alt={article.article_info.title}
                   />
                 </div>
-                <div className="pl-8">
+                <div className="md:pl-8">
                   <div>
                     <h3 className="text-2xl font-bold leading-8 tracking-tight">
                       <Link
@@ -50,7 +50,7 @@ export default function ArticleList({
                       ))}
                     </div>
                   </div>
-                  <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                  <div className="prose text-sm max-w-none text-gray-500 dark:text-gray-400 line-clamp-2">
                     {article.article_info.brief_content}
                   </div>
                   <time className="text-xs text-gray-400">
@@ -64,11 +64,6 @@ export default function ArticleList({
                   </time>
                 </div>
               </div>
-
-              {/* <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                  <span className="sr-only">Published on</span>
-                 
-                </dd> */}
             </article>
           </li>
         ))}
