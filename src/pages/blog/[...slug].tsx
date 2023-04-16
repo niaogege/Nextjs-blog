@@ -11,10 +11,14 @@ const Page = ({
   statusCode,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const md = new Markdown();
+  const test = md.render("# This is Title");
+  console.log(test, "test");
+  console.log(data, "DATA");
   if (!data || statusCode) {
     return <Error statusCode={statusCode} />;
   }
   const result = matter(data?.article_info.mark_content || "");
+  console.log(result, "RESULT");
   return (
     <section className="px-3 mx-auto prose prose-indigo">
       <header className="pt-6">
