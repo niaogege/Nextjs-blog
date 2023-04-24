@@ -4,10 +4,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   distDir: "dist",
-  ...(process.env.NODE_ENV === "production" && {
-    basePath: "/next",
-    assetPrefix: "/next",
-  }),
+  // ...(process.env.NODE_ENV === "production" && {
+  //   basePath: "/next",
+  //   assetPrefix: "/next",
+  // }),
   images: {
     remotePatterns: [
       {

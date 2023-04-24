@@ -1,4 +1,5 @@
 export interface Article {
+  author_user_info: any;
   article_id: string;
   article_info: ArticleInfo;
   category: Category;
